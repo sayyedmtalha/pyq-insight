@@ -13,12 +13,12 @@
 > 🗓️ **Development Sprint Window:** July 23, 2026 – July 26, 2026
 
 *Turn stacks of old question papers into a clear, data-backed study plan automatically.*
-***Click on *open in Streamlit* to check live app***
+
 
 ---
 
 📩 **Contact:** `sayyedmtalha@gmail.com`  
-🔗 **Repository:** [github.com/sayyedmtalha/pyq-insight](https://github.com/sayyedmtalha/pyq-insight)
+🔗 **Live App:** [(https://pyq-insight.streamlit.app/)](https://pyq-insight.streamlit.app/)
 
 ---
 
