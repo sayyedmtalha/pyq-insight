@@ -1,0 +1,9 @@
+openpyxl
+pandas
+google-genai
+groq
+pydantic
+streamlit
+pypdf
+pymupdf
+pytesseract

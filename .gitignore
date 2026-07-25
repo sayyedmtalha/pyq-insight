@@ -1,0 +1,26 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Streamlit Secrets (DO NOT COMMIT SENSITIVE API KEYS TO GITHUB)
+.streamlit/secrets.toml
+
+# Temporary & Build Directories
+tmp/
+.codex-spreadsheet-work/
+.agents/
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
