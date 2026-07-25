@@ -6,27 +6,55 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![LLM: Multi-Tier](https://img.shields.io/badge/LLM-Groq%20%7C%20Mistral%20%7C%20Gemini-rose.svg)
 
-> 🏆 **AI First Hackathon 2026 – Round 2 (MVP Submission)**  
-> Official MVP project for **Round 2: Prototype Development** at **AI First Hackathon 2026 (Summer School '26)**, organized by **I3C – IIT Jammu × Techible**.  
+> 🏆 **AI First Hackathon 2026 (Summer School '26)**  
+> **Track:** AI for Education & Skill Development  
+> **Organized by:** Institute Incubation & Innovation Council (I3C) – IIT Jammu × Techible  
+> **Team Name:** `CADevelopers`  
 > 🗓️ **Development Sprint Window:** July 23, 2026 – July 26, 2026
 
-**PYQ Insight** is an advanced AI-powered academic paper extraction and classification platform. It transforms raw university Previous Year Question (PYQ) paper PDFs into structured, unit-aligned Excel topic analysis workbooks.
-
-Designed for students, professors, and academic analysts, **PYQ Insight** automatically extracts sub-question granularity, enforces strict Course Outcome (CO) / Unit boundaries, filters text variable noise, and performs smart LLM concept classification to rank topic importance across academic years.
+*Turn stacks of old question papers into a clear, data-backed study plan automatically.*
 
 ---
 
-## 🏆 AI First Hackathon 2026 Submission
+## 👥 Team Details – `CADevelopers`
 
-This repository is submitted as a functional Minimum Viable Product (MVP) for **Round 2 (Prototype Development)** of the **AI First Hackathon 2026**, organized by **I3C - IIT Jammu** in collaboration with **Techible**.
+| Member | College | Role |
+| :--- | :--- | :--- |
+| **Farhan Alam Khan** | Jamia Millia Islamia (J.M.I) | A.I Developer |
+| **Shubham Kumar** | Kalinga Institute of Industrial Technology (KIIT) | Backend Developer |
+| **Syed Mohammad Talha** | Aligarh Muslim University (A.M.U) | Frontend Developer |
 
-### 🎯 Deliverables Summary
-- ✅ **Functional Prototype (MVP)**: Full Streamlit web application capable of multi-year PYQ processing.
-- ✅ **Source Code**: Clean, modular Python codebase with 3-tier LLM failover.
-- ✅ **Project Documentation**: Comprehensive architecture diagrams, setup guides, and feature specs.
-- ✅ **Automated Test Suite**: Unit tests (`tests/`) ensuring robust parsing and boundary enforcement.
+📩 **Contact:** `sayyedmtalha@gmail.com`  
+🔗 **Repository:** [github.com/sayyedmtalha/pyq-insight](https://github.com/sayyedmtalha/pyq-insight)
 
-### 📊 Evaluation Criteria Alignment
+---
+
+## 📌 Problem & Opportunity
+
+### The Problem
+Students preparing for university and college exams manually flip through years of past papers attempting to guess which topics matter — a slow, error-prone process repeated by every student, every semester, for every subject.
+
+- **Who is affected:** Every student preparing for internal, semester, or competitive exams, especially in college courses where past papers are scattered, inconsistent, and never formally analyzed.
+- **What's broken today:** Existing PYQ analysis tools (e.g., ANALYXX, UPSC.ai) exclusively target large standardized competitive exams (JEE / NEET / UPSC). University/college-specific subject exams are completely underserved.
+- **Why it matters now:** With exam preparation windows increasingly compressed, students need to prioritize study effort with data, not guess at it.
+- **What happens if unsolved:** Students keep over-studying low-yield topics and under-preparing for high-frequency ones, purely due to a lack of visibility into real exam patterns.
+
+---
+
+## 💡 The Proposed Solution
+
+**PYQ Insight** is an AI agent that accepts uploaded PYQ PDFs alongside a subject's syllabus, producing an interactive, downloadable Excel workbook with topic-wise frequency analysis, trend detection, and syllabus gap analysis.
+
+### 🌟 What Makes PYQ Insight Different & Innovative
+
+1. 🔍 **Syllabus-First Gap Analysis:** Identifies topics that have *never been tested* in past papers, rather than just performing basic PYQ frequency counting.
+2. 📊 **Owned, Editable Excel Deliverable:** Unlike closed web dashboards, PYQ Insight outputs an editable openpyxl Excel file reusable by teachers, students, and coaching institutes to build custom study materials.
+3. 🏫 **Built for College & University Exams:** Specifically engineered to parse noisy, inconsistent, and non-standardized college exam papers.
+4. 🧠 **3-Tier Zero-Downtime LLM Engine:** Seamless failover across **Groq LPU**, **Mistral AI**, and **Gemini 2.0 Flash** ensures reliable execution without hitting API rate limits.
+
+---
+
+## 🏆 Evaluation Criteria Alignment
 
 | Evaluation Criteria | Weightage | PYQ Insight Implementation Highlights |
 | :--- | :---: | :--- |
@@ -152,7 +180,7 @@ pyq-insight/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/pyq-insight.git
+git clone https://github.com/sayyedmtalha/pyq-insight.git
 cd pyq-insight
 ```
 
@@ -171,7 +199,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Configure Local Secrets
-Create a `.streamlit/secrets.toml` file in the root directory:
+Copy the template or create `.streamlit/secrets.toml`:
 
 ```toml
 GROQ_API_KEY = "your_groq_api_key_here"
@@ -189,7 +217,7 @@ Open your browser at `http://localhost:8501`.
 
 ## 🧪 Running Unit Tests
 
-To verify all parsing, classification, and excel creation rules locally:
+To verify parsing, classification, and boundary enforcement rules locally:
 
 ```bash
 python -m unittest discover -s tests
@@ -199,4 +227,4 @@ python -m unittest discover -s tests
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License.
