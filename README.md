@@ -16,14 +16,6 @@
 
 ---
 
-## 👥 Team Details – `CADevelopers`
-
-| Member | College | Role |
-| :--- | :--- | :--- |
-| **Farhan Alam Khan** | Jamia Millia Islamia (J.M.I) | A.I Developer |
-| **Shubham Kumar** | Kalinga Institute of Industrial Technology (KIIT) | Backend Developer |
-| **Syed Mohammad Talha** | Aligarh Muslim University (A.M.U) | Frontend Developer |
-
 📩 **Contact:** `sayyedmtalha@gmail.com`  
 🔗 **Repository:** [github.com/sayyedmtalha/pyq-insight](https://github.com/sayyedmtalha/pyq-insight)
 
