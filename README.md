@@ -1,6 +1,6 @@
 # 🎓 PYQ Insight – AI-Powered Question Paper & Syllabus Analysis Engine
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://streamlit.io/](https://pyq-insight.streamlit.app/))
 ![Hackathon: AI First 2026](https://img.shields.io/badge/Hackathon-AI%20First%202026%20%7C%20IIT%20Jammu-orange.svg)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
