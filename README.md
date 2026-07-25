@@ -18,7 +18,7 @@
 ---
 
 📩 **Contact:** `sayyedmtalha@gmail.com`  
-🔗 **Live App:** [(https://pyq-insight.streamlit.app/)](https://pyq-insight.streamlit.app/)
+🔗 **Live App:** [https://pyq-insight.streamlit.app/](https://pyq-insight.streamlit.app/)
 
 ---
 
