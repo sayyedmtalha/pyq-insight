@@ -5,5 +5,5 @@ groq
 pydantic
 streamlit
 pypdf
-pymupdf
-pytesseract
+PyMuPDF
+mistral-ai

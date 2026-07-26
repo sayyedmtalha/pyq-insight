@@ -1,4 +1,6 @@
 import os
+import platform
+import threading
 from typing import List, Dict, Any
 
 from pypdf import PdfReader
@@ -7,7 +9,11 @@ from mistral_ocr_client import MistralOCRError, extract_pdf_text
 
 try:
     import pytesseract
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    # Only set the Windows-specific path when running locally on Windows.
+    # On Linux (Streamlit Cloud) tesseract is found via PATH automatically.
+    _win_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    if platform.system() == "Windows" and os.path.exists(_win_tesseract):
+        pytesseract.pytesseract.tesseract_cmd = _win_tesseract
 except ImportError:  # pragma: no cover
     pytesseract = None
 
@@ -43,8 +49,6 @@ def _run_tesseract_ocr(pdf_path: str) -> str:
         print(f"[pdf_extraction] Tesseract OCR failed: {exc}")
         return ""
 
-
-import threading
 
 _mistral_ocr_lock = threading.Lock()
 
@@ -94,4 +98,3 @@ def extract_pdf_texts(pdf_paths: List[str], force_ocr: bool = False) -> List[Dic
         text = extract_text_from_pdf(pdf_path, force_ocr=force_ocr)
         results.append({"path": pdf_path, "file": None, "text": text})
     return results
-

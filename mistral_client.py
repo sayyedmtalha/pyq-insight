@@ -10,28 +10,50 @@ from urllib.request import Request, urlopen
 try:
     import tomllib
 except ModuleNotFoundError:  # pragma: no cover
-    import tomli as tomllib  # type: ignore
+    try:
+        import tomli as tomllib  # type: ignore
+    except ModuleNotFoundError:
+        tomllib = None  # type: ignore
+
+try:
+    import streamlit as st
+except ImportError:  # pragma: no cover
+    st = None
 
 MISTRAL_CHAT_URL = "https://api.mistral.ai/v1/chat/completions"
 DEFAULT_MODEL = "mistral-small-latest"
 
 
 def _api_key() -> str:
+    # 1. Environment variable
     value = os.getenv("MISTRAL_API_KEY", "").strip()
     if value:
         return value
 
-    for base_dir in (Path.cwd(), Path(__file__).resolve().parent):
-        secrets_path = base_dir / ".streamlit" / "secrets.toml"
-        if not secrets_path.exists():
-            continue
+    # 2. Streamlit Cloud secrets (st.secrets)
+    if st is not None:
         try:
-            with secrets_path.open("rb") as file_handle:
-                value = str(tomllib.load(file_handle).get("MISTRAL_API_KEY", "")).strip()
-            if value:
-                return value
-        except (OSError, ValueError):
-            continue
+            from streamlit.runtime.secrets import Secrets
+            if isinstance(st.secrets, Secrets):
+                v = st.secrets.get("MISTRAL_API_KEY")
+                if isinstance(v, str) and v.strip():
+                    return v.strip()
+        except Exception:
+            pass
+
+    # 3. Local secrets.toml file (dev only)
+    if tomllib is not None:
+        for base_dir in (Path.cwd(), Path(__file__).resolve().parent):
+            secrets_path = base_dir / ".streamlit" / "secrets.toml"
+            if not secrets_path.exists():
+                continue
+            try:
+                with secrets_path.open("rb") as file_handle:
+                    value = str(tomllib.load(file_handle).get("MISTRAL_API_KEY", "")).strip()
+                if value:
+                    return value
+            except (OSError, ValueError):
+                continue
     return ""
 
 
