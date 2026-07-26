@@ -6,4 +6,3 @@ pydantic
 streamlit
 pypdf
 PyMuPDF
-mistral-ai
