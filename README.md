@@ -137,7 +137,7 @@ flowchart TD
         Deduplication --> ExcelBuilder["Excel Builder<br/>(excel_builder.py)"]:::excelStyle
         
         ExcelBuilder --> TopicSheet["Topic Analysis Sheet<br/>- Row-by-Row Subtopics<br/>- Frequency & Total Marks<br/>- Critical / High / Medium / Low"]:::excelStyle
-        ExcelBuilder --> SummarySheet["Summary & Gap Analysis Sheet<br/>- Subject Weightage Distribution<br/>- Never-Tested Syllabus Topics"]:::excelStyle
+        
     end
 ```
 
