@@ -70,7 +70,7 @@ Students preparing for university and college exams manually flip through years 
   3. **Tertiary**: Gemini 2.0 Flash (`gemini-2.0-flash`) – Ultimate failover backup.
 - 📊 **Row-by-Row Excel Analytics Workbooks**:
   - **Topic Analysis Sheet**: Row-by-row syllabus subtopic breakdown with Frequency (Times Asked), Total Marks, Primary Question Type (`Theoretical`, `Derivation`, `Numerical`), Importance Rating (`Critical`, `High`, `Medium`, `Low`), and year-by-year question columns.
-  - **Summary Sheet**: Overall subject statistics and gap analysis (never-tested syllabus topics).
+  
 - 🎨 **Claude-Inspired Dark Slate Streamlit UI**: Sleek, modern web application ready for single-click deployment on Streamlit Cloud.
 
 ---
